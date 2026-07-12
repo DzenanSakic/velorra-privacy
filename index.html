@@ -49,8 +49,10 @@
     <li><strong>Podaci koje ti unosiš</strong> (transakcije, kategorije, budžeti,
       projekti, iznosi, opisi) — čuvaju se <strong>lokalno na uređaju</strong>. Mi im
       nemamo pristup osim u slučajevima navedenim niže.</li>
-    <li><strong>Nalog</strong> — ako napraviš nalog, obrađujemo tvoj email i lozinku
-      (preko Google Firebase Authentication) da bismo omogućili prijavu i sinhronizaciju.</li>
+    <li><strong>Nema naloga ni emaila</strong> — Velorra ne traži registraciju. Pri prvom
+      pokretanju aplikacija na tvom uređaju generiše nasumični anonimni identifikator (ne
+      sadrži tvoje ime ni email) koji služi da poveže tvoje podatke i, ako upariš uređaje,
+      da usmjeri šifrovanu sinhronizaciju.</li>
     <li><strong>Dijeljeni račun (sync)</strong> — ako upariš svoj uređaj s partnerovim,
       transakcije se sinhronizuju između uređaja. Sadržaj je <strong>end-to-end
       šifrovan</strong> na tvom uređaju prije slanja; prolazi kroz Google Firebase samo
@@ -86,15 +88,16 @@
   <h2>5. Dijeljenje s trećim stranama</h2>
   <p>Dijelimo podatke samo s pružaocima usluga neophodnih za rad aplikacije:</p>
   <ul>
-    <li><strong>Google (Firebase, Gemini)</strong> — autentikacija, sinhronizacija (šifrovano),
+    <li><strong>Google (Firebase, Gemini)</strong> — sinhronizacija (šifrovano),
       notifikacije i AI obrada.</li>
     <li><strong>Apple / Google Play i RevenueCat</strong> — obrada pretplata.</li>
   </ul>
 
   <h2>6. Zadržavanje i brisanje</h2>
   <p>Podaci ostaju na tvom uređaju dok ih ti ne obrišeš ili ne deinstališeš aplikaciju.
-  Brisanjem naloga uklanjaju se podaci naloga i sync‑mailbox. Za zahtjev za brisanje piši
-  na <a href="mailto:dzenansakic12@gmail.com">dzenansakic12@gmail.com</a>.</p>
+  Deinstalacijom se brišu lokalni podaci; ako si uparivao uređaje, razdvajanjem (unpair)
+  prestaje sinhronizacija. Za bilo kakav upit piši na
+  <a href="mailto:dzenansakic12@gmail.com">dzenansakic12@gmail.com</a>.</p>
 
   <h2>7. Djeca</h2>
   <p>Aplikacija nije namijenjena djeci mlađoj od 13 godina i ne prikupljamo svjesno
@@ -127,8 +130,9 @@
     <li><strong>Data you enter</strong> (transactions, categories, budgets, projects,
       amounts, notes) is stored <strong>locally on your device</strong>. We have no access
       to it except in the cases below.</li>
-    <li><strong>Account</strong> — if you create an account, we process your email and
-      password (via Google Firebase Authentication) to enable sign-in and sync.</li>
+    <li><strong>No account or email</strong> — Velorra requires no sign-up. On first launch
+      the app generates a random anonymous identifier on your device (it contains no name or
+      email) used to link your data and, if you pair devices, to route encrypted sync.</li>
     <li><strong>Shared account (sync)</strong> — if you pair your device with a partner's,
       transactions sync between devices. The content is <strong>end-to-end encrypted</strong>
       on your device before sending and passes through Google Firebase only as an encrypted
@@ -163,14 +167,14 @@
   <h2>5. Sharing with third parties</h2>
   <p>We share data only with service providers necessary to run the app:</p>
   <ul>
-    <li><strong>Google (Firebase, Gemini)</strong> — authentication, sync (encrypted),
+    <li><strong>Google (Firebase, Gemini)</strong> — sync (encrypted),
       notifications, and AI processing.</li>
     <li><strong>Apple / Google Play and RevenueCat</strong> — subscription processing.</li>
   </ul>
 
   <h2>6. Retention and deletion</h2>
-  <p>Data stays on your device until you delete it or uninstall the app. Deleting your
-  account removes account data and the sync mailbox. To request deletion, email
+  <p>Data stays on your device until you delete it or uninstall the app. Uninstalling
+  removes local data; if you paired devices, unpairing stops syncing. For any request, email
   <a href="mailto:dzenansakic12@gmail.com">dzenansakic12@gmail.com</a>.</p>
 
   <h2>7. Children</h2>
